@@ -7,7 +7,9 @@
 read.file(file_csv, folder = ".")
 }
 \arguments{
-\item{folder}{}
+\item{file_csv}{nom fichier}
+
+\item{folder}{folder could be omitted}
 }
 \value{
 df

@@ -1,7 +1,7 @@
 #' Title
 #'
-#' @param file_csv
-#' @param folder
+#' @param file_csv nom fichier
+#' @param folder folder could be omitted
 #'
 #' @return df
 #' @export
