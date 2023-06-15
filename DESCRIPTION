@@ -4,7 +4,7 @@ Version: 0.0.0.9000
 Authors@R: 
     person("Sandrine", "Lebon", , "sandrine.lebon@ipsos.com", role = c("aut", "cre")
           )
-Description: Several functions to help me
+Description: Several functions to help me.
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
