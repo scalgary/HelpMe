@@ -1,3 +1,11 @@
+#' Title
+#'
+#' @param df that we hope to be appropriate for CA
+#'
+#' @return Boolean
+#' @export
+#'
+#' @examples
 check_dataframe <- function(df) {
   check <- TRUE
   # Vérifie si l'argument est une dataframe
