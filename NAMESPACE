@@ -2,4 +2,5 @@
 
 export("%>%")
 export(check_dataframe)
+export(read.file)
 importFrom(magrittr,"%>%")
