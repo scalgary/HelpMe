@@ -3,7 +3,7 @@
 # Enlever les espaces avant et après les noms des colonnes
 #' Title
 #'
-#' @param df
+#' @param df dataframe
 #'
 #' @return df with cleaner names columns
 #' @export

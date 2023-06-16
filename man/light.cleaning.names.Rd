@@ -7,7 +7,7 @@
 light.cleaning.names(df)
 }
 \arguments{
-\item{df}{}
+\item{df}{dataframe}
 }
 \value{
 df with cleaner names columns
