@@ -23,6 +23,3 @@ CA(
 \description{
 CA fonction form FActominer package
 }
-\examples{
-result <- CA(Rhone)
-}

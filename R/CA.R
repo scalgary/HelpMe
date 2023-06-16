@@ -16,7 +16,7 @@
 #' @export
 #'
 #' @examples
-#' result <- CA(Rhone)
+#'
 CA <- function (X, ncp = 5, row.sup = NULL, col.sup = NULL, quanti.sup=NULL, quali.sup=NULL, graph = TRUE, axes=c(1,2), row.w=NULL, excl=NULL){
 
   # fct.eta2 <- function(vec,x,weights) {
@@ -146,8 +146,8 @@ CA <- function (X, ncp = 5, row.sup = NULL, col.sup = NULL, quanti.sup=NULL, qua
   ## Ajout variable quanti supp.
   if (!is.null(quanti.sup)) {
     coord.quanti.sup <- matrix(NA, length(quanti.sup), ncp)
-    if (is.null(row.sup)) coord.quanti.sup <- cov.wt(cbind.data.frame(res$row$coord,Xtot[,quanti.sup,drop=FALSE]),cor=TRUE,wt=marge.row,method="ML")$cor[-(1:ncp),1:ncp,drop=FALSE]
-    else coord.quanti.sup <- cov.wt(cbind.data.frame(res$row$coord,Xtot[-row.sup,quanti.sup,drop=FALSE]),wt=marge.row,cor=TRUE,method="ML")$cor[-(1:ncp),1:ncp,drop=FALSE]
+    if (is.null(row.sup)) coord.quanti.sup <- stats::cov.wt(cbind.data.frame(res$row$coord,Xtot[,quanti.sup,drop=FALSE]),cor=TRUE,wt=marge.row,method="ML")$cor[-(1:ncp),1:ncp,drop=FALSE]
+    else coord.quanti.sup <- stats::cov.wt(cbind.data.frame(res$row$coord,Xtot[-row.sup,quanti.sup,drop=FALSE]),wt=marge.row,cor=TRUE,method="ML")$cor[-(1:ncp),1:ncp,drop=FALSE]
     dimnames(coord.quanti.sup) <- list(colnames(Xtot)[quanti.sup], paste("Dim", 1:ncp, sep = "."))
     res$quanti.sup$coord <- coord.quanti.sup
     res$quanti.sup$cos2 <- coord.quanti.sup^2
