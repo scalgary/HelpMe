@@ -15,3 +15,6 @@ Boolean
 \description{
 Title
 }
+\examples{
+check_dataframe(Rhone)
+}

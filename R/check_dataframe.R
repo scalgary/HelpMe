@@ -5,7 +5,7 @@
 #' @return Boolean
 #' @export
 #'
-#' @examples
+#' @examples check_dataframe(Rhone)
 check_dataframe <- function(df) {
   check <- TRUE
   # Vérifie si l'argument est une dataframe

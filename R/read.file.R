@@ -23,7 +23,7 @@ read.file <- function(file_csv, folder =".") {
 
   }
 
-  df <- read.csv(file_path, header = TRUE,
+  df <- utils::read.csv(file_path, header = TRUE,
            stringsAsFactors = FALSE)
   if (!is.character(df[[1]])) {
     stop("First column doesn't contain characters.")
