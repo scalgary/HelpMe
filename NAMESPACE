@@ -2,5 +2,6 @@
 
 export("%>%")
 export(check_dataframe)
+export(light.cleaning.names)
 export(read.file)
 importFrom(magrittr,"%>%")
