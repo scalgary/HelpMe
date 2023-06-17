@@ -10,6 +10,8 @@
 #' @importFrom grDevices col2rgb
 #' @importFrom grDevices dev.new
 #' @importFrom grDevices rgb
+#' @importFrom stats setNames
 #' @importFrom utils modifyList
+#' @importFrom utils tail
 ## usethis namespace: end
 NULL
