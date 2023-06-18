@@ -10,6 +10,7 @@
 #' @importFrom grDevices col2rgb
 #' @importFrom grDevices dev.new
 #' @importFrom grDevices rgb
+#' @importFrom rlang enquo
 #' @importFrom stats setNames
 #' @importFrom utils modifyList
 #' @importFrom utils tail

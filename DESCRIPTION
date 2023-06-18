@@ -17,6 +17,7 @@ Imports:
     graphics,
     grDevices,
     magrittr,
+    rlang,
     stats,
     utils
 Depends: 
