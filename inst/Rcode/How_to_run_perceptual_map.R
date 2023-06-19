@@ -36,7 +36,8 @@ save_plot_pptx <- function(x, target, usetemplate = FALSE){
       officer::add_slide(layout = "TitleContent", master = "Custom Design") %>%
       officer::ph_with(res.ca$title, location= ph_location_label(ph_label = "Title 4")) %>%
       officer::ph_with(rvg::dml(ggobj =  HelpMe::plot_ISCA(res.ca)),
-                       location=ph_location_label(ph_label = "Content Placeholder 2"))  
+                       location=ph_location_label(ph_label = "Content Placeholder 2"))  %>% 
+      officer::remove_slide(index = 1)
     
   } else { 
     doc_pptx <- officer::read_pptx() %>%
