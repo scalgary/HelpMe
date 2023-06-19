@@ -33,8 +33,9 @@ save_plot_pptx <- function(x, target, usetemplate = FALSE){
   if (!inherits(res.ca, "CA")) stop("non convenient data")
   if (usetemplate) { 
     doc_pptx <-officer::read_pptx(system.file(package = "HelpMe", "template/templateISC.pptx")) %>% 
-      officer::ph_with(result_ca$title, location= ph_location_label(ph_label = "Title 4")) %>%
-      officer::ph_with(rvg::dml(ggobj =  HelpMe::plot_ISCA(result_ca)),
+      officer::add_slide(layout = "TitleContent", master = "Custom Design") %>%
+      officer::ph_with(res.ca$title, location= ph_location_label(ph_label = "Title 4")) %>%
+      officer::ph_with(rvg::dml(ggobj =  HelpMe::plot_ISCA(res.ca)),
                        location=ph_location_label(ph_label = "Content Placeholder 2"))  
     
   } else { 
