@@ -6,48 +6,48 @@
 #'
 #' @examples
 load_template_perceptualmap<- function() {
-  # Obtenir le chemin d'accès au fichier dans le package
+  # Get path
   file_in_package <- system.file(package = "HelpMe", "Rcode/How_to_run_perceptual_map.R")
-  # Vérifier que le fichier existe
+  # check exist
   if (!file.exists(file_in_package)) {
-    stop("Le fichier 'How_to_run_perceptual_map.R' n'a pas été trouvé dans le package.")
+    stop("No file 'How_to_run_perceptual_map.R' found.")
   }
 
-  # Définir le chemin d'accès où le fichier sera copié
+  # where to copy
   file_in_wd <- file.path(getwd(), "How_to_run_perceptual_map.R")
 
-  # Copier le fichier
+  # Copy
   file.copy(from = file_in_package, to = file_in_wd)
 
-  message("Fichier 'How_to_run_perceptual_map.R' copié dans le répertoire de travail courant.")
-  # Ouvrir le fichier dans RStudio
+  message("File 'How_to_run_perceptual_map.R' copied in working directory.")
+  # open
   if (rstudioapi::isAvailable()) {
     rstudioapi::navigateToFile(file_in_wd)
   } else {
-    message("RStudio API n'est pas disponible. Le fichier 'template.R' a été copié dans le répertoire de travail courant.")
+    message("No RStudio API. file 'template.R' has been saved in working directory.")
   }
 }
 
 
 load_template_quadmap<- function() {
-  # Obtenir le chemin d'accès au fichier dans le package
+  # Get path file
   file_in_package <- system.file(package = "HelpMe", "Rcode/How_to_run_perceptual_map.R")
-  # Vérifier que le fichier existe
+  # Check if it exists
   if (!file.exists(file_in_package)) {
-    stop("Le fichier 'How_to_run_perceptual_map.R' n'a pas été trouvé dans le package.")
+    stop("No file 'How_to_run_perceptual_map.R' found.")
   }
 
-  # Définir le chemin d'accès où le fichier sera copié
+  # Where to copy
   file_in_wd <- file.path(getwd(), "How_to_run_quadmap.R")
 
-  # Copier le fichier
+  # Copy
   file.copy(from = file_in_package, to = file_in_wd)
 
-  message("Fichier 'How_to_run_perceptual_map.R' copié dans le répertoire de travail courant.")
+  message("File 'How_to_run_perceptual_map.R' copied in working directory")
   # Ouvrir le fichier dans RStudio
   if (rstudioapi::isAvailable()) {
     rstudioapi::navigateToFile(file_in_wd)
   } else {
-    message("RStudio API n'est pas disponible. Le fichier 'template.R' a été copié dans le répertoire de travail courant.")
+    message("No RStudio API. file 'template.R' has been saved in working directory.")
   }
 }
