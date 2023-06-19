@@ -18,3 +18,4 @@ result <- Reduce(A, seq_along(plots), init = init_object)
 print(result, target ="new.pptx")
 
 
+path <- system.file(package = "HelpMe", "template/dataquad.csv")
