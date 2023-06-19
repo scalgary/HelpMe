@@ -2,11 +2,13 @@
 
 S3method(plot,CA)
 export("%>%")
+export(.onLoad)
 export(CA)
 export(check_dataframe)
 export(create_CA_from_df)
 export(create_CA_from_file)
 export(light.cleaning.names)
+export(load_template_quadmap)
 export(myplot_quadmap)
 export(plot_ISCA)
 export(read.file)

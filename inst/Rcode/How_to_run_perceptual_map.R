@@ -1,7 +1,7 @@
 
 library(HelpMe)
 
-
+###############Template Perceptual Map###############
 file_csv <- "child_red.csv"
 result_ca <- HelpMe::create_CA_from_file(file_csv,  #csv file could be a path
                                          folder =".", #folder where csv file could be
@@ -41,4 +41,4 @@ save_plot_pptx <- function(x, target){
 
 save_plot_pptx(result_ca,"example.pptx")
 
-
+#######################################
