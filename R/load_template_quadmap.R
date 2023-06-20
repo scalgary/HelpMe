@@ -31,7 +31,7 @@ load_template_perceptualmap<- function() {
 
 load_template_quadmap<- function() {
   # Get path file
-  file_in_package <- system.file(package = "HelpMe", "Rcode/How_to_run_perceptual_map.R")
+  file_in_package <- system.file(package = "HelpMe", "Rcode/How_to_run_quadmap.R")
   # Check if it exists
   if (!file.exists(file_in_package)) {
     stop("No file 'How_to_run_perceptual_map.R' found.")
