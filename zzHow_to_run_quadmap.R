@@ -20,7 +20,7 @@ library(rvg)
 
 ##helper function to get 1 pptx with all the quadmaps
 
-source(system.file(package = "HelpMe", "Rcode/helper_functions.R")))
+source(system.file(package = "HelpMe", "Rcode/helper_functions.R"))
 
 
 #print(custom_reduce(seq_along(plots),FALSE),"test_1.pptx")
