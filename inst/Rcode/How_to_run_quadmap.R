@@ -18,8 +18,10 @@ plots
 library(officer)
 library(rvg)
 ##helper function to get 1 pptx with all the quadmaps
-add_slide_pptx <- function(pres, i) {
-  pres %>%
+
+add_slide_pptx <- function(doc_pptx, i) {
+
+    doc_pptx %>%
     officer::add_slide(layout = "Title and Content", master = "Office Theme") %>%
     officer::ph_with(names(plots)[i], location= officer::ph_location_type(type = "title")) %>%
     officer::ph_with(rvg::dml(ggobj = plots[[i]]),
@@ -27,12 +29,13 @@ add_slide_pptx <- function(pres, i) {
 }
 #######
 
+
 init_pptx <- officer::read_pptx()  # Votre objet initial
 result <- Reduce(add_slide_pptx, seq_along(plots), init = init_pptx)
 print(result, target ="new.pptx")
 
 
-templateIBN <- system.file(package = "HelpMe", "template/templateIBN.pptx")
+
 
 
 
