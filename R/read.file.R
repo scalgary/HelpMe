@@ -1,15 +1,18 @@
-#' Title
-#'
+#' Read file with some checking
+#' @noRd
 #' @param file_csv nom fichier
 #' @param folder folder could be omitted
 #'
 #' @return df
-#' @export
+#'
 #'
 #' @examples
-read.file <- function(file_csv, folder =".") {
+read.file <- function(file_csv, folder = NULL) {
   # Vérifier si le fichier existe
-  file_path <- file.path(folder, file_csv)
+  if (!(is.null(folder))) {file_path <- file.path(folder, file_csv)
+  } else {
+    file_path <- file_csv
+  }
   if (!file.exists(file_path)) {
     stop("file doesn't exist : ", file_path)
   }

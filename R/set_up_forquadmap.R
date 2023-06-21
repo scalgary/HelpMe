@@ -1,22 +1,21 @@
-#set up quadmap
-#read file - has to exists and to be .csv
-#need 1 colonne character and other columns numeric
-#nb colonne has to be impair
-# read and create a liste of data map
-
-
 #' Title
-#'
+#' @noRd
 #' @param file_csv
 #' @param folder
 #'
 #' @return
-#' @export
+#'
 #'
 #' @examples
+#'
+#'
 set_up_forquadmap <- function(file_csv, folder = "."){
    df <- read.file(file_csv, folder)
-
+   #set up quadmap
+   #read file - has to exists and to be .csv
+   #need 1 colonne character and other columns numeric
+   #nb colonne has to be impair
+   # read and create a liste of data map
 # Vérifie si toutes les valeurs de la dataframe non 1st column sont numériques
   if (!all(sapply(df[,-1], is.numeric))) {
   stop("Non numeric values detected")

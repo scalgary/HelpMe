@@ -1,13 +1,13 @@
 
 #' svd.triplet from Factominer package
-#'
+#' @noRd
 #' @param X
 #' @param row.w
 #' @param col.w
 #' @param ncp
 #'
 #' @return
-#' @export
+#'
 #'
 #' @examples
 svd.triplet <- function (X, row.w = NULL, col.w = NULL,ncp=Inf) {

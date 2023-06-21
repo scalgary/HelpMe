@@ -1,6 +1,6 @@
 
 #' CA fonction form FActominer package
-#'
+#' @noRd
 #' @param X
 #' @param ncp
 #' @param row.sup
@@ -13,7 +13,7 @@
 #' @param excl
 #'
 #' @return
-#' @export
+#'
 #'
 #' @examples
 #'

@@ -14,7 +14,7 @@ load_template_perceptualmap<- function() {
   }
 
   # where to copy
-  file_in_wd <- file.path(getwd(), "How_to_run_perceptual_map.R")
+  file_in_wd <- file.path(getwd(), "Run_perceptual_map.R")
 
   # Copy
   file.copy(from = file_in_package, to = file_in_wd)
@@ -38,7 +38,7 @@ load_template_quadmap<- function() {
   }
 
   # Where to copy
-  file_in_wd <- file.path(getwd(), "How_to_run_quadmap.R")
+  file_in_wd <- file.path(getwd(), "Run_quadmap.R")
 
   # Copy
   file.copy(from = file_in_package, to = file_in_wd)

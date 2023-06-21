@@ -5,6 +5,14 @@
 # read and create a liste of data map
 
 
+#' Split quadmap file
+#' @noRd
+#' @param df
+#'
+#' @return
+#'
+#'
+#' @examples
 split_data_frame <- function(df){
 
 # Vérifie si toutes les valeurs de la dataframe non 1st column sont numériques
