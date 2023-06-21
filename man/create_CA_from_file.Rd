@@ -9,6 +9,7 @@ create_CA_from_file(
   folder = ".",
   title = NULL,
   row.sup = NULL,
+  col.sup = NULL,
   graph = FALSE,
   ncp = 2
 )
