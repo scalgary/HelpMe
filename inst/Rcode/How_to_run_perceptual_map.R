@@ -24,30 +24,7 @@ plot(result_ca)
 
 #if we want to export plot to pptx
 # we need rvg and officer
-library(rvg)
-library(officer)
-
-
-save_plot_pptx <- function(x, target, usetemplate = FALSE){
-  res.ca <- x
-  if (!inherits(res.ca, "CA")) stop("non convenient data")
-  if (usetemplate) { 
-    doc_pptx <-officer::read_pptx(system.file(package = "HelpMe", "template/templateISC.pptx")) %>% 
-      officer::add_slide(layout = "TitleContent", master = "Custom Design") %>%
-      officer::ph_with(res.ca$title, location= ph_location_label(ph_label = "Title 4")) %>%
-      officer::ph_with(rvg::dml(ggobj =  HelpMe::plot_ISCA(res.ca)),
-                       location=ph_location_label(ph_label = "Content Placeholder 2"))  %>% 
-      officer::remove_slide(index = 1)
-    
-  } else { 
-    doc_pptx <- officer::read_pptx() %>%
-    officer::add_slide(layout = "Title and Content", master = "Office Theme") %>%
-    officer::ph_with(res.ca$title, location= officer::ph_location_type(type = "title")) %>%
-    officer::ph_with(rvg::dml(ggobj =  HelpMe::plot_ISCA(res.ca)),
-                     location=officer::ph_location_type(type="body")) 
-  }
-  print(doc_pptx, target)
-}
+source(system.file(package = "HelpMe", "Rcode/helper_functions.R"))
 
 save_plot_pptx(result_ca,"example.pptx")
 
