@@ -19,23 +19,20 @@ library(officer)
 library(rvg)
 ##helper function to get 1 pptx with all the quadmaps
 
-add_slide_pptx <- function(doc_pptx, i) {
-
-    doc_pptx %>%
-    officer::add_slide(layout = "Title and Content", master = "Office Theme") %>%
-    officer::ph_with(names(plots)[i], location= officer::ph_location_type(type = "title")) %>%
-    officer::ph_with(rvg::dml(ggobj = plots[[i]]),
-                     location=officer::ph_location_type(type="body"))
-}
-#######
-
-
-init_pptx <- officer::read_pptx()  # Votre objet initial
-result <- Reduce(add_slide_pptx, seq_along(plots), init = init_pptx)
-print(result, target ="new.pptx")
 
 
 
+#visualisation
+plots
+
+###export to pptx needs officer and rvg
+library(officer)
+library(rvg)
+
+##helper function to get 1 pptx with all the quadmaps
+
+source(system.file(package = "HelpMe", "Rcode/helper_functions.R"))
 
 
-
+#print(custom_reduce(seq_along(plots),FALSE),"test_1.pptx")
+print(custom_reduce(seq_along(plots),TRUE),"test_2.pptx")
