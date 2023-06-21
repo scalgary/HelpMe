@@ -9,6 +9,7 @@ myplot_quadmap(
   isHE = FALSE,
   masterbrand = NULL,
   force = 10,
+  TBdetail = "TB",
   max.overlaps = 10
 )
 }

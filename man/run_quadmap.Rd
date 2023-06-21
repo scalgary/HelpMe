@@ -6,8 +6,9 @@
 \usage{
 run_quadmap(
   file_csv,
-  folder = ".",
+  folder = NULL,
   isHE = FALSE,
+  TBdetail = "TB",
   masterbrand = NULL,
   force = 10,
   max.overlaps = 10

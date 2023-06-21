@@ -2,7 +2,7 @@
 % Please edit documentation in R/create.CA.R
 \name{create_CA_from_df}
 \alias{create_CA_from_df}
-\title{Title}
+\title{Create CA object from df or file}
 \usage{
 create_CA_from_df(df, title = NULL, row.sup = NULL, graph = FALSE, ncp = 2)
 }
@@ -10,5 +10,5 @@ create_CA_from_df(df, title = NULL, row.sup = NULL, graph = FALSE, ncp = 2)
 \item{ncp}{}
 }
 \description{
-Title
+Create CA object from df or file
 }

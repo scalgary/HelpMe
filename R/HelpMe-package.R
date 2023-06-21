@@ -6,6 +6,7 @@
 #' @importFrom graphics arrows
 #' @importFrom graphics lines
 #' @importFrom graphics par
+#' @importFrom graphics plot
 #' @importFrom graphics points
 #' @importFrom grDevices col2rgb
 #' @importFrom grDevices dev.new
