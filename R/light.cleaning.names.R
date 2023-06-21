@@ -6,7 +6,7 @@
 #' @param df dataframe
 #'
 #' @return df with cleaner names columns
-#' @export
+#'
 #'
 #' @examples
 #' names(Rhone)

@@ -1,9 +1,9 @@
 #' tab.disjonctif from Factominer
-#'
+#' @noRd
 #' @param tab
 #'
 #' @return
-#' @export
+#'
 #'
 #' @examples
 tab.disjonctif <- function (tab){

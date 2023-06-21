@@ -1,10 +1,10 @@
 #' Title
-#'
+#' @noRd
 #' @param libname
 #' @param pkgname
 #'
 #' @return
-#' @export
+#'
 #'
 #' @examples
 .onLoad <- function(libname, pkgname) {

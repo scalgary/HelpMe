@@ -6,11 +6,11 @@
 
 
 #' Split quadmap file
-#'
+#' @noRd
 #' @param df
 #'
 #' @return
-#' @export
+#'
 #'
 #' @examples
 split_data_frame <- function(df){

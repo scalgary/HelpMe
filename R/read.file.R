@@ -1,10 +1,10 @@
 #' Read file with some checking
-#'
+#' @noRd
 #' @param file_csv nom fichier
 #' @param folder folder could be omitted
 #'
 #' @return df
-#' @export
+#'
 #'
 #' @examples
 read.file <- function(file_csv, folder = NULL) {

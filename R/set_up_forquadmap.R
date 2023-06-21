@@ -11,7 +11,7 @@
 #' @param folder
 #'
 #' @return
-#' @export
+#'
 #'
 #' @examples
 set_up_forquadmap <- function(file_csv, folder = "."){
