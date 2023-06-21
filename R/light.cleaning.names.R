@@ -1,17 +1,14 @@
-# Assumons que df est votre dataframe
 
-# Enlever les espaces avant et après les noms des colonnes
-#' Title
+#' Light cleaning
 #'
-#' @param df dataframe
+#' @param df
 #'
-#' @return df with cleaner names columns
-#'
+#' @return
+#' @export
 #'
 #' @examples
 #' names(Rhone)
 #' names(light.cleaning.names(Rhone))
-#'
 light.cleaning.names <- function(df) {
 names(df) <- trimws(names(df))
 

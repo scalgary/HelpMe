@@ -2,21 +2,17 @@
 % Please edit documentation in R/light.cleaning.names.R
 \name{light.cleaning.names}
 \alias{light.cleaning.names}
-\title{Title}
+\title{Light cleaning}
 \usage{
 light.cleaning.names(df)
 }
 \arguments{
-\item{df}{dataframe}
-}
-\value{
-df with cleaner names columns
+\item{df}{}
 }
 \description{
-Title
+Light cleaning
 }
 \examples{
 names(Rhone)
 names(light.cleaning.names(Rhone))
-
 }
