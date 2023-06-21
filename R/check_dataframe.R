@@ -1,4 +1,4 @@
-#' Title
+#' Check if df appropriate for CA
 #'
 #' @param df that we hope to be appropriate for CA
 #'

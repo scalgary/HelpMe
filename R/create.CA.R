@@ -1,4 +1,4 @@
-#' Title
+#' Create CA object from df or file
 #'
 #' @param df
 #' @param title

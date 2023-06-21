@@ -1,5 +1,5 @@
 
-#' Title
+#' Get template automatically
 #'
 #' @return
 #' @export

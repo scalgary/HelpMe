@@ -1,4 +1,4 @@
-#' Title
+#' Read file with some checking
 #'
 #' @param file_csv nom fichier
 #' @param folder folder could be omitted
