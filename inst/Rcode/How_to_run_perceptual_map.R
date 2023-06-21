@@ -11,15 +11,10 @@ result_ca <- HelpMe::create_CA_from_file(file_csv,  #csv file could be a path
 
 #default will be save in working directory
 #Robject saved
-saveRDS(result_ca,paste0(result_ca$title,".rds"))
-#save coordonnates CA
-write.csv(result_ca$PM_coord,paste0(result_ca$title,"_coord.csv"), row.names = FALSE)
-#save data used for CA
-write.csv(result_ca$call$Xtot,paste0(result_ca$title,"_data.csv"), row.names = FALSE)
-
+export_CA(result_ca )
 #if we want to visualize in R
 HelpMe::plot_ISCA(result_ca)
-plot(result_ca)
+
 #
 
 #if we want to export plot to pptx

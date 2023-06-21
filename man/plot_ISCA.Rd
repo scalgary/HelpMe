@@ -4,7 +4,7 @@
 \alias{plot_ISCA}
 \title{Title}
 \usage{
-plot_ISCA(x, graph.type = c("ggplot", "classic"))
+plot_ISCA(x, graph.type = c("ggplot", "classic"), max.overlaps = 10)
 }
 \arguments{
 \item{graph.type}{}

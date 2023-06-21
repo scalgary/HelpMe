@@ -71,7 +71,7 @@ if (is.null(folder)) {
 #Robject saved
 saveRDS(res.ca, rds_path)
 #save coordonnates CA
-write.csv(res.ca$PM_coord,coord_path, row.names = FALSE)
+write.csv(res.ca$PM_coord,coord_path, row.names = TRUE)
 #save data used for CA
-write.csv(res.ca$call$Xtot, data_path, row.names = FALSE)
+write.csv(res.ca$call$Xtot, data_path, row.names = TRUE)
 }

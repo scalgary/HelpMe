@@ -210,7 +210,9 @@ CA <- function (X, ncp = 5, row.sup = NULL, col.sup = NULL, quanti.sup=NULL, qua
   temp1["Type"] <- "Brand"
   temp2["Type"] <- "Attributes"
   res$PM_coord <- rbind(temp1,temp2)
-
+#FLIPPING?
+ res$PM_coord[,2]<-(-1*res$PM_coord[,2])
+ res$PM_coord[,1]<-(-1*res$PM_coord[,1])
   class(res) <- c("CA", "list")
   if (graph & (ncp>1)) {
     print(plot(res,axes=axes))
