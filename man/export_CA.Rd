@@ -4,7 +4,7 @@
 \alias{export_CA}
 \title{Title}
 \usage{
-export_CA(res.ca, where = NULL)
+export_CA(res.ca, folder = NULL)
 }
 \arguments{
 \item{where}{}

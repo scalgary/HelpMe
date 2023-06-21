@@ -15,5 +15,6 @@
 #' @importFrom stats setNames
 #' @importFrom utils modifyList
 #' @importFrom utils tail
+#' @importFrom utils write.csv
 ## usethis namespace: end
 NULL

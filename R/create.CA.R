@@ -52,7 +52,7 @@ create_CA_from_file <- function(file_csv, folder='.',title =NULL,
 #'
 #' @examples
 #'
- export_CA <- function(res.ca, where =NULL){
+ export_CA <- function(res.ca, folder =NULL){
 if (!inherits(res.ca, "CA")) stop("non convenient data")
 #
 if (is.null(folder)) {
@@ -60,10 +60,10 @@ if (is.null(folder)) {
   coord_path <- paste0(res.ca$title,"_coord.csv")
   data_path <- paste0(res.ca$title,"_data.csv")
 } else {
-  if (!(dir.exists(where))) {stop("The folder doesn't exist")}
-  rds_path <- file.path(where,paste0(res.ca$title,".rds"))
-  coord_path <- file.path(paste0(where,res.ca$title,"_coord.csv"))
-  data_path <- file.path(paste0(where,res.ca$title,"_data.csv"))
+  if (!(dir.exists(folder))) {stop("The folder doesn't exist")}
+  rds_path <- file.path(folder,paste0(res.ca$title,".rds"))
+  coord_path <- file.path(paste0(folder,res.ca$title,"_coord.csv"))
+  data_path <- file.path(paste0(folder,res.ca$title,"_data.csv"))
 
 }
   #useful if the first row of data is empty or contains total
