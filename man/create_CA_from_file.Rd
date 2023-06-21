@@ -15,7 +15,7 @@ create_CA_from_file(
 )
 }
 \arguments{
-\item{ncp}{}
+\item{col.sup}{}
 }
 \description{
 Title

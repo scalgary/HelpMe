@@ -8,6 +8,7 @@
 #'
 #' @examples
 plot_ISCA <- function(x, graph.type = c("ggplot","classic")) {
+if (!inherits(x, "CA")) stop("non convenient data")
 df_data <- x$PM_coord
 names(df_data)[names(df_data) == "Dim 1"] <- "DimX"
 names(df_data)[names(df_data) == "Dim 2"] <- "DimY"

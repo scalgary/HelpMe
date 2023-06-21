@@ -40,3 +40,38 @@ create_CA_from_file <- function(file_csv, folder='.',title =NULL,
   if (is.null(title)) {title <- sub(".csv", "", basename(file_csv))}
   result_ca <- create_CA_from_df(df, title, row.sup, col.sup, graph, ncp )
 }
+
+
+#' Title
+#'
+#' @param res.ca
+#' @param where
+#'
+#' @return
+#' @export
+#'
+#' @examples
+#'
+ export_CA <- function(res.ca, where =NULL){
+if (!inherits(res.ca, "CA")) stop("non convenient data")
+#
+if (is.null(folder)) {
+  rds_path <- paste0(res.ca$title,".rds")
+  coord_path <- paste0(res.ca$title,"_coord.csv")
+  data_path <- paste0(res.ca$title,"_data.csv")
+} else {
+  if (!(dir.exists(where))) {stop("The folder doesn't exist")}
+  rds_path <- file.path(where,paste0(res.ca$title,".rds"))
+  coord_path <- file.path(paste0(where,res.ca$title,"_coord.csv"))
+  data_path <- file.path(paste0(where,res.ca$title,"_data.csv"))
+
+}
+  #useful if the first row of data is empty or contains total
+#default will be save in working directory
+#Robject saved
+saveRDS(res.ca, rds_path)
+#save coordonnates CA
+write.csv(res.ca$PM_coord,coord_path, row.names = FALSE)
+#save data used for CA
+write.csv(res.ca$call$Xtot, data_path, row.names = FALSE)
+}
