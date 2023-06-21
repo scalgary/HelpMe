@@ -8,6 +8,7 @@ run_quadmap(
   file_csv,
   folder = NULL,
   isHE = FALSE,
+  TBdetail = "TB",
   masterbrand = NULL,
   force = 10,
   max.overlaps = 10

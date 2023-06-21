@@ -1,5 +1,7 @@
 ##helper function to get 1 pptx with all the quadmaps
-
+###export to pptx needs officer and rvg
+library(officer)
+library(rvg)
 
 #mylist is a list of plots
 custom_pptx <- function(mylist,use_template = TRUE) {

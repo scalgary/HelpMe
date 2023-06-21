@@ -12,7 +12,7 @@
 #'
 #' @examples
 myplot_quadmap <- function(inputData, isHE = FALSE,
-                           masterbrand = NULL, force = 10, max.overlaps = 10){
+                           masterbrand = NULL, force = 10, TBdetail = "TB", max.overlaps = 10){
   myplot <- ggplot2::ggplot(inputData, ggplot2::aes(x = inputData[, 2],
                                                     y = inputData[, 3])) +
     ggplot2::geom_rect(
@@ -56,7 +56,7 @@ myplot_quadmap <- function(inputData, isHE = FALSE,
                                   labels = function(a) sprintf("%.1f%%", round(a, digits = 2))) +
       ggplot2::scale_y_continuous(breaks = c(min(inputData[,3]),max(inputData[,3])),
                                   labels = function(a) sprintf("%.2f", round(a, digits = 2))) +
-      ggplot2::labs(x = "Attribute Performance", y = "Attribute Importance")}
+      ggplot2::labs(x = paste0("Attribute Performance ",TBdetail), y = "Attribute Importance")}
 
 
   if(isHE){
