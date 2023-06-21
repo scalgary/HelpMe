@@ -2,7 +2,7 @@
 % Please edit documentation in R/read.file.R
 \name{read.file}
 \alias{read.file}
-\title{Title}
+\title{Read file with some checking}
 \usage{
 read.file(file_csv, folder = ".")
 }
@@ -15,5 +15,5 @@ read.file(file_csv, folder = ".")
 df
 }
 \description{
-Title
+Read file with some checking
 }

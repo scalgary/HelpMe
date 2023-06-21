@@ -2,7 +2,7 @@
 % Please edit documentation in R/check_dataframe.R
 \name{check_dataframe}
 \alias{check_dataframe}
-\title{Title}
+\title{Check if df appropriate for CA}
 \usage{
 check_dataframe(df)
 }
@@ -13,7 +13,7 @@ check_dataframe(df)
 Boolean
 }
 \description{
-Title
+Check if df appropriate for CA
 }
 \examples{
 check_dataframe(Rhone)

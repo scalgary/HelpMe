@@ -2,10 +2,10 @@
 % Please edit documentation in R/Get_template.R
 \name{get_template}
 \alias{get_template}
-\title{Title}
+\title{Get template automatically}
 \usage{
 get_template()
 }
 \description{
-Title
+Get template automatically
 }
