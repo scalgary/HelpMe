@@ -6,7 +6,7 @@
 \usage{
 run_quadmap(
   file_csv,
-  folder = ".",
+  folder = NULL,
   isHE = FALSE,
   masterbrand = NULL,
   force = 10,

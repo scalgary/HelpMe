@@ -12,7 +12,7 @@
 #' @export
 #'
 #' @examples
-run_quadmap <- function(file_csv, folder= ".", isHE = FALSE,
+run_quadmap <- function(file_csv, folder= NULL, isHE = FALSE,
                         masterbrand = NULL, force = 10, max.overlaps = 10){
   df <- read.file(file_csv, folder)
   df_list <- split_data_frame(df)

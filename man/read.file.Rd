@@ -4,7 +4,7 @@
 \alias{read.file}
 \title{Read file with some checking}
 \usage{
-read.file(file_csv, folder = ".")
+read.file(file_csv, folder = NULL)
 }
 \arguments{
 \item{file_csv}{nom fichier}

@@ -4,6 +4,8 @@ library(HelpMe)
 ###############Template QuadMap###############
 
 file_csv <- "dataquad.csv"
+file_csv <- system.file(package = "HelpMe", "extdata/dataquad.csv")
+
 #your file 2n +1 columns
 #1st column label
 # 2 to n+1 Performance
