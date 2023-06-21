@@ -32,8 +32,9 @@ gg_graph  <- ggplot2::ggplot(data=df_data, ggplot2::aes(x=df_data[,"DimX"],
   ggplot2::guides(color = "none", shape = "none") +
   ggrepel::geom_text_repel(ggplot2::aes(colour=df_data[,"Type"]),
                            box.padding = ggplot2::unit(0.15, "lines"),
-                           force = 6, size = 2.6, max.overlaps = max.overlaps)+
-  ggplot2::annotate("text", x = max(xlims), y = min(ylims), label = lab.x, hjust = 1, vjust = 1, size = 2.6)
+                           force = 6, size = 2.6, max.overlaps = max.overlaps)
+                           
+  #ggplot2::annotate("text", x = max(xlims), y = min(ylims), label = lab.x, hjust = 1, vjust = 1, size = 2.6)
 
 if (graph.type == "ggplot")  return(gg_graph)
 }
