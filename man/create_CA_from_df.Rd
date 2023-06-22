@@ -4,10 +4,17 @@
 \alias{create_CA_from_df}
 \title{Create CA object from df or file}
 \usage{
-create_CA_from_df(df, title = NULL, row.sup = NULL, graph = FALSE, ncp = 2)
+create_CA_from_df(
+  df,
+  title = NULL,
+  row.sup = NULL,
+  col.sup = NULL,
+  graph = FALSE,
+  ncp = 2
+)
 }
 \arguments{
-\item{ncp}{}
+\item{col.sup}{}
 }
 \description{
 Create CA object from df or file

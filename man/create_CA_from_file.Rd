@@ -9,12 +9,13 @@ create_CA_from_file(
   folder = ".",
   title = NULL,
   row.sup = NULL,
+  col.sup = NULL,
   graph = FALSE,
   ncp = 2
 )
 }
 \arguments{
-\item{ncp}{}
+\item{col.sup}{}
 }
 \description{
 Title
