@@ -12,7 +12,7 @@
 #'
 #' @examples
 create_CA_from_df<- function(df,title = NULL, row.sup = NULL, col.sup = NULL, graph = FALSE, ncp = 2) {
-  #mapdata <- as.data.frame(df[-1,-1], row.names = df[-1,1])
+  mapdata <- as.data.frame(df[,-1], row.names = df[,1])
   result_ca <- CA(mapdata, row.sup = row.sup, col.sup = col.sup, graph = graph, ncp = ncp)
   if (is.null(title)) {title <- deparse(substitute(df))}
   result_ca$title <- title
