@@ -1,6 +1,6 @@
 
 #' Get template automatically
-#'
+#' @noRd
 #' @return
 #' @export
 #'

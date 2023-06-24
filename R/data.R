@@ -1,5 +1,5 @@
 #' Test data
-#'
+#' @noRd
 #'
 #' Report ...
 #'

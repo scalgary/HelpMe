@@ -1,6 +1,6 @@
 
 #' Title
-#'
+#' @noRd
 #' @return
 #' @export
 #'

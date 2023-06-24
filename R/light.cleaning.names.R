@@ -1,6 +1,6 @@
 
 #' Light cleaning
-#'
+#' @noRd
 #' @param df
 #'
 #' @return

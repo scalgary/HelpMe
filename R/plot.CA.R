@@ -4,7 +4,7 @@
 
 utils::globalVariables(c("y","xfin","yfin","coul"))
 #' Title
-#'
+#' @noRd
 #' @param x
 #' @param axes
 #' @param xlim

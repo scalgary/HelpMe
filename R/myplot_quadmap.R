@@ -1,5 +1,5 @@
 #' Title
-#'
+#' @noRd
 #' @param inputData data for quadmap 3 columns: label, performance and impact
 #' @param isHE map for HE
 #' @param masterbrand if it is HE
