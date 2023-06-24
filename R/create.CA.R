@@ -19,11 +19,15 @@ create_CA_from_df<- function(df,title = NULL, row.sup = NULL, col.sup = NULL, gr
   return(result_ca)
 }
 
-#' Create CA from csv file
-
-#' @param file_csv "data.csv" could even be a path
-#' @param folder could be a path default is current directory
-#' @param title if NULL title is the name of the file used
+#' Create CA object
+#' @description
+#' Create a CA object leveraging the function CA from the package FActoMiner
+#' By using row.sup and col.sup, we can exclude some row or column from the analysis
+#'
+#'
+#' @param file_csv csv file
+#' @param folder default working directory
+#' @param title default name of the file
 #' @param row.sup if row.sup= 1 remove first line
 #' @param graph plot the CA graph from factominer
 #' @param ncp default is 2
@@ -33,7 +37,16 @@ create_CA_from_df<- function(df,title = NULL, row.sup = NULL, col.sup = NULL, gr
 #' @export
 #'
 #' @examples
-create_CA_from_file <- function(file_csv, folder='.',title =NULL,
+#' file_csv <- system.file(package = "HelpMe", "extdata/child_red.csv")
+#' data_map <- read.csv(file_csv)
+#' result.ca <- HelpMe::create_CA(file_csv, folder = NULL)
+#' print("Coordonnates")
+#' result.ca$PM_coord
+#' ##HelpMe::export_CA(result.ca) #if you want to exportt
+
+
+
+create_CA <- function(file_csv, folder='.',title =NULL,
                                 row.sup = NULL, col.sup = NULL, graph = FALSE, ncp = 2) {
   df <- read.file(file_csv =file_csv, folder= folder)
   df <- light.cleaning.names(df)
@@ -42,8 +55,8 @@ create_CA_from_file <- function(file_csv, folder='.',title =NULL,
 }
 
 
-#' Title
-#'
+#' Export the resultat of create_CA
+#' save a red object, the coordonnates and the data used to run the CA
 #' @param res.ca
 #' @param where
 #'

@@ -8,7 +8,7 @@
 #'
 #' @examples
 .onLoad <- function(libname, pkgname) {
-  packageStartupMessage("Can be useful to Begin by running Get Template")
+  #packageStartupMessage("Can be useful to Begin by running Get Template")
 
 
 

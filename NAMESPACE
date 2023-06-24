@@ -2,8 +2,8 @@
 
 S3method(plot,CA)
 export("%>%")
+export(create_CA)
 export(create_CA_from_df)
-export(create_CA_from_file)
 export(export_CA)
 export(get_template)
 export(light.cleaning.names)

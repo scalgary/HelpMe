@@ -2,7 +2,8 @@
 % Please edit documentation in R/create.CA.R
 \name{export_CA}
 \alias{export_CA}
-\title{Title}
+\title{Export the resultat of create_CA
+save a red object, the coordonnates and the data used to run the CA}
 \usage{
 export_CA(res.ca, folder = NULL)
 }
@@ -10,5 +11,6 @@ export_CA(res.ca, folder = NULL)
 \item{where}{}
 }
 \description{
-Title
+Export the resultat of create_CA
+save a red object, the coordonnates and the data used to run the CA
 }
