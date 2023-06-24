@@ -2,7 +2,7 @@
 % Please edit documentation in R/create.CA.R
 \name{create_CA_from_file}
 \alias{create_CA_from_file}
-\title{Title}
+\title{Create CA from csv file}
 \usage{
 create_CA_from_file(
   file_csv,
@@ -18,5 +18,5 @@ create_CA_from_file(
 \item{col.sup}{}
 }
 \description{
-Title
+Create CA from csv file
 }

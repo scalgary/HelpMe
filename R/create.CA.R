@@ -1,5 +1,5 @@
-#' Create CA object from df or file
-#'
+#' Create CA object from file
+#' @noRd
 #' @param df
 #' @param title
 #' @param row.sup
@@ -19,17 +19,17 @@ create_CA_from_df<- function(df,title = NULL, row.sup = NULL, col.sup = NULL, gr
   return(result_ca)
 }
 
-#' Title
-#' @noRd
-#' @param file_csv
-#' @param folder
-#' @param title
-#' @param row.sup
-#' @param graph
-#' @param ncp
-#' @param col.sup
+#' Create CA from csv file
+
+#' @param file_csv "data.csv" could even be a path
+#' @param folder could be a path default is current directory
+#' @param title if NULL title is the name of the file used
+#' @param row.sup if row.sup= 1 remove first line
+#' @param graph plot the CA graph from factominer
+#' @param ncp default is 2
+#' @param col.sup if col.sup=5 means don't use 5th column
 #'
-#' @return
+#' @return Object class CA
 #' @export
 #'
 #' @examples
