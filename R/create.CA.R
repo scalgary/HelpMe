@@ -61,7 +61,7 @@ if (is.null(folder)) {
   data_path <- paste0(res.ca$title,"_data.csv")
 } else {
   if (!(dir.exists(folder))) {stop("The folder doesn't exist")}
-  rds_path <- file.path(folder,paste0(res.ca$title,".rds"))
+  rds_path <- file.path(paste0(folder,res.ca$title,".rds"))
   coord_path <- file.path(paste0(folder,res.ca$title,"_coord.csv"))
   data_path <- file.path(paste0(folder,res.ca$title,"_data.csv"))
 
