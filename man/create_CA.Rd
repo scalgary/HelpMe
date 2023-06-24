@@ -42,5 +42,5 @@ data_map <- read.csv(file_csv)
 result.ca <- HelpMe::create_CA(file_csv, folder = NULL)
 print("Coordonnates")
 result.ca$PM_coord
-HelpMe::export_CA(result.ca)
+##HelpMe::export_CA(result.ca) #if you want to exportt
 }
