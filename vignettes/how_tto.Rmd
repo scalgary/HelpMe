@@ -1,0 +1,19 @@
+---
+title: "how to"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{how to}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+hghgh
+```{r setup}
+library(HelpMe)
+```
