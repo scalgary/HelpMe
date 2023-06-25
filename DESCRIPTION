@@ -2,9 +2,9 @@ Package: HelpMe
 Title: The package Helps ME
 Version: 1.1.0
 Authors@R: 
-    person("Sandrine", "Lebon", , "sandrine.lebon@ipsos.com", role = c("aut", "cre")
-          )
-Description: Several functions to help me.
+    c(person("Sandrine", "Lebon" , ,"sandrine.lebon@ipsos.com", role = c("aut", "cre")
+          ), person("Francois", "Husson", role = c("aut", "cre"))
+Description: Several Helpful functions: Perceptual maps (without FactoMiner dependencies).
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)

@@ -9,7 +9,7 @@
 #' @param max.overlaps argument pour ggrepel
 #'
 #' @return
-#' @export
+#'
 #'
 #' @examples
 run_quadmap <- function(file_csv, folder= NULL, isHE = FALSE, TBdetail = "TB",

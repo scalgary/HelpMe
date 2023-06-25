@@ -14,3 +14,6 @@ export_CA(res.ca, folder = NULL)
 Export the resultat of create_CA
 save a red object, the coordonnates and the data used to run the CA
 }
+\author{
+Leverage Factominer package
+}

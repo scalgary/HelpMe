@@ -4,7 +4,7 @@
 #' @param df
 #'
 #' @return
-#' @export
+#'
 #'
 #' @examples
 #' names(Rhone)

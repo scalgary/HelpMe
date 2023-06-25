@@ -2,7 +2,7 @@
 #' Get template automatically
 #' @noRd
 #' @return
-#' @export
+#'
 #'
 #' @examples
 get_template <- function() {

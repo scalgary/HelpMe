@@ -6,7 +6,7 @@
 \usage{
 create_CA(
   file_csv,
-  folder = ".",
+  folder = NULL,
   title = NULL,
   row.sup = NULL,
   col.sup = NULL,
@@ -38,9 +38,9 @@ By using row.sup and col.sup, we can exclude some row or column from the analysi
 }
 \examples{
 file_csv <- system.file(package = "HelpMe", "extdata/child_red.csv")
-data_map <- read.csv(file_csv)
+##data_map <- read.csv(file_csv) if you want to check your file in R
 result.ca <- HelpMe::create_CA(file_csv, folder = NULL)
 print("Coordonnates")
 result.ca$PM_coord
-##HelpMe::export_CA(result.ca) #if you want to exportt
+##HelpMe::export_CA(result.ca) #if you want to export the result
 }

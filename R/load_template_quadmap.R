@@ -2,7 +2,7 @@
 #' Title
 #' @noRd
 #' @return
-#' @export
+#'
 #'
 #' @examples
 load_template_perceptualmap<- function() {

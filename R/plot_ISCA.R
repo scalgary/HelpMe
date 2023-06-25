@@ -4,7 +4,7 @@
 #' @param graph.type
 #'
 #' @return
-#' @export
+#'
 #'
 #' @examples
 plot_ISCA <- function(x, graph.type = c("ggplot","classic"), max.overlaps = 10) {

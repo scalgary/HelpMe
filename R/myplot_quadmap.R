@@ -8,7 +8,7 @@
 #' @param
 #'
 #' @return
-#' @export
+#'
 #'
 #' @examples
 myplot_quadmap <- function(inputData, isHE = FALSE,

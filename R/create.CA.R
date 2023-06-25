@@ -8,7 +8,7 @@
 #' @param col.sup
 #'
 #' @return
-#' @export
+#'
 #'
 #' @examples
 create_CA_from_df<- function(df,title = NULL, row.sup = NULL, col.sup = NULL, graph = FALSE, ncp = 2) {
@@ -21,7 +21,7 @@ create_CA_from_df<- function(df,title = NULL, row.sup = NULL, col.sup = NULL, gr
 
 #' Create CA object
 #' @description
-#' Create a CA object leveraging the function CA from the package FActoMiner
+#' Create a CA object leveraging the function CA from the package FactoMiner
 #' By using row.sup and col.sup, we can exclude some row or column from the analysis
 #'
 #'
@@ -32,7 +32,7 @@ create_CA_from_df<- function(df,title = NULL, row.sup = NULL, col.sup = NULL, gr
 #' @param graph plot the CA graph from factominer
 #' @param ncp default is 2
 #' @param col.sup if col.sup=5 means don't use 5th column
-#'
+#' @author Leverage Factominer package
 #' @return Object class CA
 #' @export
 #'
@@ -46,7 +46,7 @@ create_CA_from_df<- function(df,title = NULL, row.sup = NULL, col.sup = NULL, gr
 
 
 
-create_CA <- function(file_csv, folder='.',title =NULL,
+create_CA <- function(file_csv, folder = NULL,title = NULL,
                                 row.sup = NULL, col.sup = NULL, graph = FALSE, ncp = 2) {
   df <- read.file(file_csv =file_csv, folder= folder)
   df <- light.cleaning.names(df)
@@ -57,12 +57,12 @@ create_CA <- function(file_csv, folder='.',title =NULL,
 
 #' Export the resultat of create_CA
 #' save a red object, the coordonnates and the data used to run the CA
-#' @param res.ca
-#' @param where
+#' @param res.ca object de class CA
+#' @param folder path
 #'
 #' @return
 #' @export
-#'
+#' @author Leverage Factominer package
 #' @examples
 #'
  export_CA <- function(res.ca, folder =NULL){
@@ -74,7 +74,7 @@ if (is.null(folder)) {
   data_path <- paste0(res.ca$title,"_data.csv")
 } else {
   if (!(dir.exists(folder))) {stop("The folder doesn't exist")}
-  rds_path <- file.path(folder,paste0(res.ca$title,".rds"))
+  rds_path <- file.path(paste0(folder,res.ca$title,".rds"))
   coord_path <- file.path(paste0(folder,res.ca$title,"_coord.csv"))
   data_path <- file.path(paste0(folder,res.ca$title,"_data.csv"))
 

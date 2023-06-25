@@ -6,7 +6,7 @@
 \alias{HelpMe-package}
 \title{HelpMe: The package Helps ME}
 \description{
-Several functions to help me.
+Several Helpful functions: Perceptual maps (without FactoMiner dependencies).
 }
 \seealso{
 Useful links:
