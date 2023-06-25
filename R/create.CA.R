@@ -40,14 +40,15 @@ create_CA_from_df<- function(df,title = NULL, row.sup = NULL, col.sup = NULL, gr
 #' file_csv <- system.file(package = "HelpMe", "extdata/child_red.csv")
 #' ##data_map <- read.csv(file_csv) if you want to check your file in R
 #' result.ca <- HelpMe::create_CA(file_csv, folder = NULL)
-#' print("Coordonnates")
-#' result.ca$PM_coord
-#' ##HelpMe::export_CA(result.ca) #if you want to export the result
+#' ## Use first row and 4th column as supplementary informations -
+#' result.ca.1 <- HelpMe::create_CA(file_csv, folder = NULL, title = "mytitle",row.sup =1, col.sup=4)
+#' ## HelpMe::export_CA(result.ca.1) #if you want to export the result
+#' if (HelpMe::check_pptx.CA()) { save_plot_pptx(result.ca, "mypptx.pptx")}
 
 
 
 create_CA <- function(file_csv, folder = NULL,title = NULL,
-                                row.sup = NULL, col.sup = NULL, graph = FALSE, ncp = 2) {
+                                row.sup = NULL, col.sup = NULL, graph = TRUE, ncp = 2) {
   df <- read.file(file_csv =file_csv, folder= folder)
   df <- light.cleaning.names(df)
   if (is.null(title)) {title <- sub(".csv", "", basename(file_csv))}
@@ -56,33 +57,35 @@ create_CA <- function(file_csv, folder = NULL,title = NULL,
 
 
 #' Export the resultat of create_CA
-#' save a red object, the coordonnates and the data used to run the CA
+#' save the coordonnates and the data used to run the CA as csv files
 #' @param res.ca object de class CA
 #' @param folder path
 #'
 #' @return
 #' @export
-#' @author Leverage Factominer package
+#' @author
 #' @examples
+#' ## result.ca <- HelpMe::create_CA(file_csv, folder = NULL)
+#' ## HelpMe::export.CA(result.ca, "output") if output folder exists!
 #'
- export_CA <- function(res.ca, folder =NULL){
+ export_CA <- function(res.ca, folder =NULL, rdssaved = FALSE){
 if (!inherits(res.ca, "CA")) stop("non convenient data")
 #
 if (is.null(folder)) {
-  rds_path <- paste0(res.ca$title,".rds")
+  if (rdssaved) {rds_path <- paste0(res.ca$title,".rds")}
   coord_path <- paste0(res.ca$title,"_coord.csv")
   data_path <- paste0(res.ca$title,"_data.csv")
 } else {
   if (!(dir.exists(folder))) {stop("The folder doesn't exist")}
-  rds_path <- file.path(paste0(folder,res.ca$title,".rds"))
-  coord_path <- file.path(paste0(folder,res.ca$title,"_coord.csv"))
-  data_path <- file.path(paste0(folder,res.ca$title,"_data.csv"))
+  if (rdssaved) {rds_path <- file.path(folder,paste0(res.ca$title,".rds"))}
+  coord_path <- file.path(folder,paste0(res.ca$title,"_coord.csv"))
+  data_path <- file.path(folder,paste0(res.ca$title,"_data.csv"))
 
 }
   #useful if the first row of data is empty or contains total
 #default will be save in working directory
 #Robject saved
-saveRDS(res.ca, rds_path)
+if (rdssaved) {saveRDS(res.ca, rds_path)}
 #save coordonnates CA
 write.csv(res.ca$PM_coord,coord_path, row.names = TRUE)
 #save data used for CA

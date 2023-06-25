@@ -3,9 +3,9 @@
 \name{export_CA}
 \alias{export_CA}
 \title{Export the resultat of create_CA
-save a red object, the coordonnates and the data used to run the CA}
+save the coordonnates and the data used to run the CA as csv files}
 \usage{
-export_CA(res.ca, folder = NULL)
+export_CA(res.ca, folder = NULL, rdssaved = FALSE)
 }
 \arguments{
 \item{res.ca}{object de class CA}
@@ -14,8 +14,10 @@ export_CA(res.ca, folder = NULL)
 }
 \description{
 Export the resultat of create_CA
-save a red object, the coordonnates and the data used to run the CA
+save the coordonnates and the data used to run the CA as csv files
 }
-\author{
-Leverage Factominer package
+\examples{
+## result.ca <- HelpMe::create_CA(file_csv, folder = NULL)
+## HelpMe::export.CA(result.ca, "output") if output folder exists!
+
 }

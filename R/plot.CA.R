@@ -33,7 +33,7 @@ utils::globalVariables(c("y","xfin","yfin","coul"))
 #' @param ...
 #'
 #' @return
-#' @export
+#'
 #'
 #' @examples
 plot.CA <- function (x, axes = c(1, 2),

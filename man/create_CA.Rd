@@ -10,7 +10,7 @@ create_CA(
   title = NULL,
   row.sup = NULL,
   col.sup = NULL,
-  graph = FALSE,
+  graph = TRUE,
   ncp = 2
 )
 }
@@ -40,9 +40,10 @@ By using row.sup and col.sup, we can exclude some row or column from the analysi
 file_csv <- system.file(package = "HelpMe", "extdata/child_red.csv")
 ##data_map <- read.csv(file_csv) if you want to check your file in R
 result.ca <- HelpMe::create_CA(file_csv, folder = NULL)
-print("Coordonnates")
-result.ca$PM_coord
-##HelpMe::export_CA(result.ca) #if you want to export the result
+## Use first row and 4th column as supplementary informations -
+result.ca.1 <- HelpMe::create_CA(file_csv, folder = NULL, title = "mytitle",row.sup =1, col.sup=4)
+## HelpMe::export_CA(result.ca.1) #if you want to export the result
+if (HelpMe::check_pptx.CA()) { save_plot_pptx(result.ca, "mypptx.pptx")}
 }
 \author{
 Leverage Factominer package

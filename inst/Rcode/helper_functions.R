@@ -58,15 +58,17 @@ custom_pptx <- function(mylist,use_template = TRUE) {
 
 
 
-save_plot_pptx <- function(x, target, max.overlaps = 10, usetemplate = FALSE){
+save_plot_pptx <- function(x, target = NULL, max.overlaps = 10, usetemplate = FALSE){
   res.ca <- x
+
   if (!inherits(res.ca, "CA")) stop("non convenient data")
     mytitle <- paste0(res.ca$title," Inertia Explained"," (",format(res.ca$eig[2,"cumulative percentage of variance"],nsmall=2,digits=2),"%)",sep="")
+    if (is.null(target)) { target <- paste0(res.ca$title,".pptx")}
   if (usetemplate) {
     doc_pptx <-officer::read_pptx(system.file(package = "HelpMe", "template/templateISC.pptx")) %>%
       officer::add_slide(layout = "TitleContent", master = "Custom Design") %>%
       officer::ph_with( mytitle, location= ph_location_label(ph_label = "Title 4")) %>%
-      officer::ph_with(rvg::dml(ggobj =  HelpMe::plot_ISCA(res.ca, max.overlaps = max.overlaps)),
+      officer::ph_with(rvg::dml(ggobj =  HelpMe:::plot_ISCA(res.ca, max.overlaps = max.overlaps)),
                        location=ph_location_label(ph_label = "Content Placeholder 2"))  %>%
       officer::remove_slide(index = 1)
 
@@ -74,7 +76,7 @@ save_plot_pptx <- function(x, target, max.overlaps = 10, usetemplate = FALSE){
     doc_pptx <- officer::read_pptx() %>%
       officer::add_slide(layout = "Title and Content", master = "Office Theme") %>%
       officer::ph_with(mytitle, location= officer::ph_location_type(type = "title")) %>%
-      officer::ph_with(rvg::dml(ggobj =  HelpMe::plot_ISCA(res.ca,max.overlaps = max.overlaps)),
+      officer::ph_with(rvg::dml(ggobj =  HelpMe:::plot_ISCA(res.ca,max.overlaps = max.overlaps)),
                        location=officer::ph_location_type(type="body"))
   }
   print(doc_pptx, target)
