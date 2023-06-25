@@ -16,8 +16,4 @@ Useful links:
 }
 
 }
-\author{
-\strong{Maintainer}: Sandrine Lebon \email{sandrine.lebon@ipsos.com}
-
-}
 \keyword{internal}

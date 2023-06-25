@@ -33,7 +33,7 @@ create_CA(
 Object class CA
 }
 \description{
-Create a CA object leveraging the function CA from the package FActoMiner
+Create a CA object leveraging the function CA from the package FactoMiner
 By using row.sup and col.sup, we can exclude some row or column from the analysis
 }
 \examples{
@@ -43,4 +43,7 @@ result.ca <- HelpMe::create_CA(file_csv, folder = NULL)
 print("Coordonnates")
 result.ca$PM_coord
 ##HelpMe::export_CA(result.ca) #if you want to export the result
+}
+\author{
+Leverage Factominer package
 }

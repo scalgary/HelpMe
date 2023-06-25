@@ -8,7 +8,9 @@ save a red object, the coordonnates and the data used to run the CA}
 export_CA(res.ca, folder = NULL)
 }
 \arguments{
-\item{where}{}
+\item{res.ca}{object de class CA}
+
+\item{folder}{path}
 }
 \description{
 Export the resultat of create_CA
