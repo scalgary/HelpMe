@@ -16,4 +16,13 @@ Useful links:
 }
 
 }
+\author{
+\strong{Maintainer}: Sandrine Lebon \email{sandrine.lebon@ipsos.com}
+
+Authors:
+\itemize{
+  \item Francois Husson
+}
+
+}
 \keyword{internal}

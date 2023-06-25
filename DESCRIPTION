@@ -2,8 +2,14 @@ Package: HelpMe
 Title: The package Helps ME
 Version: 1.1.0
 Authors@R: 
-    c(person("Sandrine", "Lebon" , ,"sandrine.lebon@ipsos.com", role = c("aut", "cre")
-          ), person("Francois", "Husson", role = c("aut", "cre")))
+    c(person(given = "Sandrine", 
+             family = "Lebon" ,
+             role = c("aut", "cre"),
+             email = "sandrine.lebon@ipsos.com"),
+              person(given = "Francois",
+             family = "Husson",
+             role = "aut")
+			 )
 Description: Several Helpful functions: Perceptual maps (without FactoMiner dependencies).
 License: MIT + file LICENSE
 Encoding: UTF-8
