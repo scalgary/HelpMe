@@ -1,6 +1,6 @@
 Package: HelpMe
 Title: The package Helps ME
-Version: 2.0.0
+Version: 1.1.0
 Authors@R: 
     c(person(given = "Sandrine", 
              family = "Lebon" ,
@@ -10,7 +10,7 @@ Authors@R:
              family = "Husson",
              role = "aut")
 			 )
-Description: Several Helpful functions: Perceptual maps (without FactoMiner dependencies), Quadmaps.
+Description: Several Helpful functions: Perceptual maps (without FactoMiner dependencies).
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
