@@ -1,8 +1,8 @@
 ---
-title: "How to run Perceptual Map"
+title: "How_to"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{how to}
+  %\VignetteIndexEntry{How_to}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
@@ -14,16 +14,20 @@ knitr::opts_chunk$set(
 )
 ```
 
-
 ```{r setup}
 library(HelpMe)
 ```
 
 # Simple case
-We use all rows and columns of the file child_red.csv
-All outputs are exported in the working directory 
+
+We use **all** rows and columns of the file child_red.csv.
+
+All outputs are exported in the working directory.
+
 child_red_coord.csv and child_red_data.csv are saved.
-If Officer and Rvg are installed, the pptx chil_red.pptx is created
+
+If Officer and Rvg are installed, the pptx child_red.pptx is created.
+
 ```{r}
 res.ca <- HelpMe::create_CA("child_red.csv")
 HelpMe::export_CA(res.ca)
@@ -31,10 +35,14 @@ if (HelpMe::check_pptx.CA()) {save_plot_pptx(res.ca)}
 ```
 
 # Complex case
-We don't use the first row and 4th column of the file child_red.csv
-All outputs are exported in the output directory
-MyCA_coord.csv and MyCA_data.csv are saved.
-If Officer and Rvg are installed, the pptx Mypptx.pptx is created using the template from the package HelpMe
+
+We don't use the **first** row and **4th** column of the file child_red.csv.
+
+All outputs are exported in the *output* directory.
+
+As we use *title :* MyCA_coord.csv and MyCA_data.csv are saved.
+
+If Officer and Rvg are installed, the pptx Mypptx.pptx is created using the template from the package HelpMe.
 
 ```{r}
 res.ca <- HelpMe::create_CA("child_red.csv", row.sup = 1, col.sup = 4, title = "MyCA")
@@ -42,4 +50,3 @@ dir.create("output")
 HelpMe::export_CA(res.ca, "output")
 if (HelpMe::check_pptx.CA()) {save_plot_pptx(res.ca, target = "Mypptx.pptx", usetemplate = TRUE)}
 ```
-
