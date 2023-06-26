@@ -4,7 +4,7 @@ library(officer)
 library(rvg)
 
 #mylist is a list of plots
-custom_pptx <- function(mylist,use_template = TRUE) {
+custom_pptx <- function(mylist, use_template = FALSE) {
 
   #check if argumnet 1 is a list
   if (!(inherits(mylist, "list"))) {stop("You need a list of plots")}
@@ -18,7 +18,7 @@ custom_pptx <- function(mylist,use_template = TRUE) {
   if (!(all_have_names)) {
     stop("All elements should have names.")
   }
-  if (use_template){
+  if (use_template) {
     init_pptx <- officer::read_pptx(system.file(package = "HelpMe", "template/templateGG.pptx"))
     add_slide_pptx_template <- function(doc_pptx, i, myplots = mylist) {
       doc_pptx %>%

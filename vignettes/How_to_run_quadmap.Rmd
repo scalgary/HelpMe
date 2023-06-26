@@ -1,0 +1,45 @@
+---
+title: "How_to_run_quadmap"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{How_to_run_quadmap}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(HelpMe)
+```
+
+
+```{r, include=FALSE}
+mydf <- HelpMe:::read.file("dataquad.csv")
+```
+
+You need to have a file containing: driver, n columns performance and n columns impacts.
+The name of the impacts columns will be used when running the quadmap
+```{r}
+mydf[c(9,10,18),c(1,2,3,9,10)] #extract table
+```
+# Simple Use
+
+run_quadmap sets up the quadmaps that we need to export to PPTX.
+If Officer and rvg are installed, you can use custom_pptx function
+It saved all the quadmaps into one single pptx.
+
+
+```{r}
+plots <- HelpMe::run_quadmap("dataquad.csv")
+if (HelpMe::check_pptx.CA()) {
+  mypptx <- custom_pptx(plots, use_template = FALSE)
+  print(mypptx, "example.pptx")
+}
+```
+

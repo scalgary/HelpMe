@@ -1,6 +1,6 @@
 
 #' Title
-#' @noRd
+#'
 #' @param file_csv file name or could be path
 #' @param folder path for file name
 #' @param isHE is it an HE
@@ -9,10 +9,10 @@
 #' @param max.overlaps argument pour ggrepel
 #'
 #' @return
-#'
+#' @export
 #'
 #' @examples
-run_quadmap <- function(file_csv, folder= NULL, isHE = FALSE, TBdetail = "TB",
+run_quadmap <- function(file_csv, folder= NULL, isHE = FALSE, TBdetail = "T2B",
                         masterbrand = NULL, force = 10, max.overlaps = 10){
   df <- read.file(file_csv, folder)
   df_list <- split_data_frame(df)
