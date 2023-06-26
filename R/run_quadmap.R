@@ -1,6 +1,6 @@
 
 #' Title
-#'
+#' @noRd
 #' @param file_csv file name or could be path
 #' @param folder path for file name
 #' @param isHE is it an HE
@@ -9,7 +9,7 @@
 #' @param max.overlaps argument pour ggrepel
 #'
 #' @return
-#' @export
+#'
 #'
 #' @examples
 run_quadmap <- function(file_csv, folder= NULL, isHE = FALSE, TBdetail = "T2B",
