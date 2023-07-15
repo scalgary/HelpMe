@@ -10,7 +10,7 @@ Authors@R:
              family = "Husson",
              role = "aut")
 			 )
-Description: Several Helpful functions: Perceptual maps (without FactoMiner dependencies).
+Description: Several Helpful functions: Perceptual maps (without FactoMiner dependencies). Quadmaps
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
