@@ -1,8 +1,8 @@
 ---
-title: "How_to"
+title: "How_to_Perceptual_Maps"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{How_to}
+  %\VignetteIndexEntry{How_to_Perceptual_Maps}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---

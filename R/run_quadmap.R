@@ -1,6 +1,6 @@
 
 #' Title
-#' @noRd
+#'
 #' @param file_csv file name or could be path
 #' @param folder path for file name
 #' @param isHE is it an HE
