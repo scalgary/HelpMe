@@ -27,7 +27,8 @@
 
   if (check) {
     source(system.file(package = "HelpMe", "Rcode/helper_functions.R"))
-    print("You can now use the function save_plot_pptx to export you CA object")
+    print("You can now use the function save_CA_pptx to export you CA object")
+    print("You can now use the function save_quadmap_pptx to export you CA object")
   }
 
 

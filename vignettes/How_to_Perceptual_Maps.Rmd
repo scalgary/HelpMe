@@ -31,7 +31,7 @@ If Officer and Rvg are installed, the pptx child_red.pptx is created.
 ```{r}
 res.ca <- HelpMe::create_CA("child_red.csv")
 HelpMe::export_CA(res.ca)
-if (HelpMe::check_pptx.CA()) {save_CA_pptx(res.ca)}
+if (HelpMe::check_pptx()) {save_CA_pptx(res.ca, "child_red.pptx")}
 ```
 
 # Complex case
@@ -48,5 +48,5 @@ If Officer and Rvg are installed, the pptx Mypptx.pptx is created using the temp
 res.ca <- HelpMe::create_CA("child_red.csv", row.sup = 1, col.sup = 4, title = "MyCA")
 dir.create("output")
 HelpMe::export_CA(res.ca, "output")
-if (HelpMe::check_pptx.CA()) {save_CA_pptx(res.ca, target = "Mypptx.pptx", usetemplate = TRUE)}
+if (HelpMe::check_pptx()) {save_CA_pptx(res.ca, target = "Mypptx.pptx", usetemplate = TRUE)}
 ```
