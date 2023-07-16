@@ -47,7 +47,7 @@ custom_pptx <- function(mylist, use_template = FALSE) {
 
 
 
-save_plot_pptx <- function(x, target = NULL, max.overlaps = 10, usetemplate = FALSE){
+save_CA_pptx <- function(x, target = NULL, max.overlaps = 10, usetemplate = FALSE){
   res.ca <- x
 
   if (!inherits(res.ca, "CA")) stop("non convenient data")
