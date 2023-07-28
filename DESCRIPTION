@@ -1,6 +1,6 @@
 Package: HelpMe
 Title: The package Helps ME
-Version: 1.1.0
+Version: 1.1.2
 Authors@R: 
     c(person(given = "Sandrine", 
              family = "Lebon" ,
