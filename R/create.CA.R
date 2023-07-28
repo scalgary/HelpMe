@@ -44,7 +44,7 @@ create_CA_from_df<- function(df,title = NULL, row.sup = NULL, col.sup = NULL, gr
 #' ## Use first row and 4th column as supplementary informations -
 #' result.ca.1 <- HelpMe::create_CA(file_csv, folder = NULL, title = "mytitle",row.sup =1, col.sup=4)
 #' ## HelpMe::export_CA(result.ca.1) #if you want to export the result
-#' if (HelpMe::check_pptx.CA()) { save_plot_pptx(result.ca, "mypptx.pptx")}
+#' if (HelpMe::check_pptx()) { save_plot_pptx(result.ca, "mypptx.pptx")}
 
 
 
