@@ -27,7 +27,7 @@ The titles use the header of the Impact Scores columns
 
 
 ```{r, include=FALSE}
-df <- readr::read_csv("dataquad.csv")
+df <-read.csv("dataquad.csv")
 df[,c(1:3,9:10)]
 
 ```
