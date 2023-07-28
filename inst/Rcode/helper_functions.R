@@ -38,7 +38,7 @@ save_quadmap_pptx <- function(mylist, target  ) {
 
 
 
-save_CA_pptx <- function(x, target, max.overlaps = 10, usetemplate = FALSE){
+save_CA_pptx <- function(x, target, folder = NULL, max.overlaps = 10, usetemplate = FALSE){
   res.ca <- x
 
   if (!inherits(res.ca, "CA")) stop("non convenient data")
@@ -59,5 +59,7 @@ save_CA_pptx <- function(x, target, max.overlaps = 10, usetemplate = FALSE){
       officer::ph_with(rvg::dml(ggobj =  HelpMe:::plot_ISCA(res.ca,max.overlaps = max.overlaps)),
                        location=officer::ph_location_type(type="body"))
   }
-  print(doc_pptx, target)
+  if (is.null(folder)) {
+  print(doc_pptx, target)}
+    else {print(doc_pptx, file.path(folder,target))}
 }
