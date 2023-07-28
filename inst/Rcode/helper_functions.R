@@ -42,7 +42,9 @@ save_CA_pptx <- function(x, target, folder = NULL, max.overlaps = 10, usetemplat
   res.ca <- x
 
   if (!inherits(res.ca, "CA")) stop("non convenient data")
-    mytitle <- paste0(res.ca$title," Inertia Explained"," (",format(res.ca$eig[2,"cumulative percentage of variance"],nsmall=2,digits=2),"%)",sep="")
+    #mytitle <- paste0(res.ca$title," Inertia Explained"," (",format(res.ca$eig[2,"cumulative percentage of variance"],nsmall=2,digits=2),"%)",sep="")
+    mytitle <- res.ca$title
+
     if (is.null(target)) { target <- paste0(res.ca$title,".pptx")}
   if (usetemplate) {
     doc_pptx <-officer::read_pptx(system.file(package = "HelpMe", "template/templateISC.pptx")) %>%

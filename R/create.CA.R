@@ -78,11 +78,13 @@ if (is.null(folder)) {
   if (rdssaved) {rds_path <- paste0(res.ca$title,".rds")}
   coord_path <- paste0(res.ca$title,"_coord.csv")
   data_path <- paste0(res.ca$title,"_data.csv")
+  eigen_path <- paste0(res.ca$title,"_eigen.csv")
 } else {
   if (!(dir.exists(folder))) {stop("The folder doesn't exist")}
   if (rdssaved) {rds_path <- file.path(folder,paste0(res.ca$title,".rds"))}
   coord_path <- file.path(folder,paste0(res.ca$title,"_coord.csv"))
   data_path <- file.path(folder,paste0(res.ca$title,"_data.csv"))
+  eigen_path <- file.path(folder,paste0(res.ca$title,"_eigen.csv"))
 
 }
   #useful if the first row of data is empty or contains total
@@ -93,4 +95,6 @@ if (rdssaved) {saveRDS(res.ca, rds_path)}
 write.csv(res.ca$PM_coord,coord_path, row.names = TRUE)
 #save data used for CA
 write.csv(res.ca$call$Xtot, data_path, row.names = TRUE)
+
+write.csv(res.ca$eig,  eigen_path, row.names = TRUE)
 }
