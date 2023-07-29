@@ -6,7 +6,7 @@
 #'
 #' @examples
 #'
-check_pptx.CA <- function() {
+check_pptx <- function() {
 
   check <- FALSE
   required_packages <- c("officer", "rvg")

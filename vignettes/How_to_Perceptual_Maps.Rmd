@@ -1,8 +1,8 @@
 ---
-title: "How_to"
+title: "How_to_Perceptual_Maps"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{How_to}
+  %\VignetteIndexEntry{How_to_Perceptual_Maps}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
@@ -31,7 +31,7 @@ If Officer and Rvg are installed, the pptx child_red.pptx is created.
 ```{r}
 res.ca <- HelpMe::create_CA("child_red.csv")
 HelpMe::export_CA(res.ca)
-if (HelpMe::check_pptx.CA()) {save_plot_pptx(res.ca)}
+if (HelpMe::check_pptx()) {save_CA_pptx(res.ca, "child_red.pptx")}
 ```
 
 # Complex case
@@ -40,7 +40,7 @@ We don't use the **first** row and **4th** column of the file child_red.csv.
 
 All outputs are exported in the *output* directory.
 
-As we use *title :* MyCA_coord.csv and MyCA_data.csv are saved.
+As we use *title :* MyCA_coord.csv and MyCA_data.csv and MyCA_eigen are saved.
 
 If Officer and Rvg are installed, the pptx Mypptx.pptx is created using the template from the package HelpMe.
 
@@ -48,5 +48,5 @@ If Officer and Rvg are installed, the pptx Mypptx.pptx is created using the temp
 res.ca <- HelpMe::create_CA("child_red.csv", row.sup = 1, col.sup = 4, title = "MyCA")
 dir.create("output")
 HelpMe::export_CA(res.ca, "output")
-if (HelpMe::check_pptx.CA()) {save_plot_pptx(res.ca, target = "Mypptx.pptx", usetemplate = TRUE)}
+if (HelpMe::check_pptx()) {save_CA_pptx(res.ca, target = "Mypptx.pptx", folder = "output", usetemplate = TRUE)}
 ```

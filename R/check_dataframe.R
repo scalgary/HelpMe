@@ -32,16 +32,17 @@ check_dataframe <- function(df) {
     stop("Missing Attributes names")
   }
 
+  # Vérifie s'il y a des valeurs manquantes
+  if (any(is.na(df))) {
+    check <- FALSE
+    stop("Missing values detected. Is there a missing row?")
+  }
+  return(check)
   # Vérifie si toutes les valeurs de la dataframe sont numériques
   if (!all(sapply(df, is.numeric))) {
     check <- FALSE
     stop("Non numeric values detected")
   }
 
-  # Vérifie s'il y a des valeurs manquantes
-  if (any(is.na(df))) {
-    check <- FALSE
-    stop("Missing values detected")
-  }
-  return(check)
+
 }
