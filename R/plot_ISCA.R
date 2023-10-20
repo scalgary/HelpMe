@@ -10,6 +10,11 @@
 plot_ISCA <- function(x, graph.type = c("ggplot","classic"), max.overlaps = 10) {
 if (!inherits(x, "CA")) stop("non convenient data")
 df_data <- x$PM_coord
+df1 <- df_data[which(df_data$Type=="Brand"),]
+df2 <- df_data[which(df_data$Type!="Brand"),]
+rownames(df1) <- gsub("\\.", " ", rownames(df1))
+
+df_data <- rbind(df1,df2)
 names(df_data)[names(df_data) == "Dim 1"] <- "DimX"
 names(df_data)[names(df_data) == "Dim 2"] <- "DimY"
 graph.type <- match.arg(graph.type[1],c("ggplot","classic"))
