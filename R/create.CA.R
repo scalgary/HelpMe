@@ -36,7 +36,7 @@ create_CA_from_df<- function(df,title = NULL, row.sup = NULL, col.sup = NULL, gr
 create_CA_from_file <- function(file_csv, folder='.',title =NULL,
                                 row.sup = NULL, col.sup = NULL, graph = FALSE, ncp = 2) {
   df <- read.file(file_csv =file_csv, folder= folder)
-  df <- light.cleaning.names(df)
+  #df <- light.cleaning.names(df)
   if (is.null(title)) {title <- sub(".csv", "", basename(file_csv))}
   result_ca <- create_CA_from_df(df, title, row.sup, col.sup, graph, ncp )
 }
