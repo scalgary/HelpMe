@@ -51,7 +51,7 @@ create_CA_from_df<- function(df,title = NULL, row.sup = NULL, col.sup = NULL, gr
 create_CA <- function(file_csv, folder = NULL,title = NULL,
                                 row.sup = NULL, col.sup = NULL, graph = TRUE, ncp = 2) {
   df <- read.file(file_csv =file_csv, folder= folder)
-  df <- light.cleaning.names(df)
+  #df <- light.cleaning.names(df)
   #check mapdata
   check = check_dataframe(df)
   if (is.null(title)) {title <- sub(".csv", "", basename(file_csv))}
