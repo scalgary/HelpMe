@@ -38,6 +38,7 @@ df[,c(1:3,9:10)]
 
 Create the quadmap plots
 ```{r}
+
 myplots <- HelpMe::run_quadmap("dataquad.csv")
 if (HelpMe::check_pptx()) {save_quadmap_pptx(myplots,"myquadmap.pptx")}
 ```

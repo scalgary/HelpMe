@@ -58,10 +58,11 @@ As we use *title :* MyCA_coord.csv and MyCA_data.csv and MyCA_eigen are saved.
 If Officer and Rvg are installed, the pptx Mypptx.pptx is created using the template from the package HelpMe.
 
 ```{r}
+getwd()
 res.ca <- HelpMe::create_CA("child_red.csv", row.sup = 1, col.sup = 4, title = "MyCA")
 dir.create("output")
 HelpMe::export_CA(res.ca, "output")
-if (HelpMe::check_pptx()) {save_CA_pptx(res.ca, target = "Mypptx.pptx", folder = "output", usetemplate = TRUE)}
+HelpMe:::plot_ISCA(res.ca)
 ```
 
 
