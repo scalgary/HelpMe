@@ -36,6 +36,19 @@ if (HelpMe::check_pptx()) {save_CA_pptx(res.ca, "child_red.pptx")}
 
 # Complex case
 
+## flipping axes
+```{r}
+res.ca <- HelpMe::create_CA("child_red.csv")
+HelpMe::export_CA(res.ca)
+df <- res.ca$PM_coord
+plot_ISCA(res.ca)
+df$`Dim 1` <- -1 *df$`Dim 1`
+res.ca$PM_coord <- df
+plot_ISCA(res.ca)
+```
+
+## removing row or columns
+
 We don't use the **first** row and **4th** column of the file child_red.csv.
 
 All outputs are exported in the *output* directory.
@@ -50,3 +63,5 @@ dir.create("output")
 HelpMe::export_CA(res.ca, "output")
 if (HelpMe::check_pptx()) {save_CA_pptx(res.ca, target = "Mypptx.pptx", folder = "output", usetemplate = TRUE)}
 ```
+
+
