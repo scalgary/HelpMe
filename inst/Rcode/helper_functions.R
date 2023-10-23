@@ -38,7 +38,7 @@ save_quadmap_pptx_old <- function(mylist, target  ) {
 
 
 
-save_CA_pptx <- function(x, target, folder = NULL, max.overlaps = 10, usetemplate = FALSE){
+save_CA_pptx <- function(x, target, folder = NULL, max.overlaps = 10, usetemplate = FALSE, want_flip = FALSE){
   res.ca <- x
 
   if (!inherits(res.ca, "CA")) stop("non convenient data")
@@ -52,7 +52,7 @@ save_CA_pptx <- function(x, target, folder = NULL, max.overlaps = 10, usetemplat
     doc_pptx <-officer::read_pptx(system.file(package = "HelpMe", "template/templateISC.pptx")) %>%
       officer::add_slide(layout = "TitleContent", master = "Custom Design") %>%
       officer::ph_with( mytitle, location= ph_location_label(ph_label = "Title 4")) %>%
-      officer::ph_with(rvg::dml(ggobj =  HelpMe:::plot_ISCA(res.ca, max.overlaps = max.overlaps)),
+      officer::ph_with(rvg::dml(ggobj =  HelpMe:::plot_ISCA(res.ca, max.overlaps = max.overlaps, want_flip = want_flip)),
                        location=ph_location_label(ph_label = "Content Placeholder 2"))  %>%
       officer::remove_slide(index = 1)
 
@@ -60,7 +60,7 @@ save_CA_pptx <- function(x, target, folder = NULL, max.overlaps = 10, usetemplat
     doc_pptx <- officer::read_pptx() %>%
       officer::add_slide(layout = "Title and Content", master = "Office Theme") %>%
       officer::ph_with(mytitle, location= officer::ph_location_type(type = "title")) %>%
-      officer::ph_with(rvg::dml(ggobj =  HelpMe:::plot_ISCA(res.ca,max.overlaps = max.overlaps)),
+      officer::ph_with(rvg::dml(ggobj =  HelpMe:::plot_ISCA(res.ca,max.overlaps = max.overlaps, want_flip = want_flip)),
                        location=officer::ph_location_type(type="body"))
   }
   if (is.null(folder)) {
