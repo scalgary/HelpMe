@@ -41,10 +41,10 @@ if (HelpMe::check_pptx()) {save_CA_pptx(res.ca, "child_red.pptx")}
 res.ca <- HelpMe::create_CA("child_red.csv")
 HelpMe::export_CA(res.ca)
 df <- res.ca$PM_coord
-plot_ISCA(res.ca)
+HelpMe:::plot_ISCA(res.ca)
 df$`Dim 1` <- -1 *df$`Dim 1`
 res.ca$PM_coord <- df
-plot_ISCA(res.ca)
+HelpMe:::plot_ISCA(res.ca)
 ```
 
 ## removing row or columns

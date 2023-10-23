@@ -3,7 +3,7 @@
 library(officer)
 library(rvg)
 
-
+options(ggrepel.max.overlaps = Inf)
 
 #mylist is a list of plots
 save_quadmap_pptx_old <- function(mylist, target  ) {
@@ -60,7 +60,7 @@ save_CA_pptx <- function(x, target, folder = NULL, max.overlaps = 10, usetemplat
     doc_pptx <- officer::read_pptx() %>%
       officer::add_slide(layout = "Title and Content", master = "Office Theme") %>%
       officer::ph_with(mytitle, location= officer::ph_location_type(type = "title")) %>%
-      officer::ph_with(rvg::dml(ggobj =  HelpMe:::plot_ISCA(res.ca,max.overlaps = max.overlaps, want_flip = want_flip)),
+      officer::ph_with(rvg::dml(ggobj =  HelpMe:::plot_ISCA(res.ca,max.overlaps = max.overlaps)),
                        location=officer::ph_location_type(type="body"))
   }
   if (is.null(folder)) {
