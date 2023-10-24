@@ -37,14 +37,23 @@ if (HelpMe::check_pptx()) {save_CA_pptx(res.ca, "child_red.pptx")}
 # Complex case
 
 ## flipping axes
+Sometimes you want to plot the map with flipped axes-
+In this case, you have to flip before exporting and printing
+
 ```{r}
 res.ca <- HelpMe::create_CA("child_red.csv")
-HelpMe::export_CA(res.ca)
+# first show original map
+HelpMe:::plot_ISCA(res.ca)
+# example on Dim 1
+# extract the data for the map from the objevct res.ca
 df <- res.ca$PM_coord
-HelpMe:::plot_ISCA(res.ca)
-df$`Dim 1` <- -1 *df$`Dim 1`
+df$`Dim 1` <- -1 *df$`Dim 1` #flip
+#resave the correct coordinates into the object res.ca
 res.ca$PM_coord <- df
+# plot the new map
 HelpMe:::plot_ISCA(res.ca)
+#export the coordinates used for the flipped map
+HelpMe::export_CA(res.ca)
 ```
 
 ## removing row or columns
