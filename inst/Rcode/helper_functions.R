@@ -6,7 +6,7 @@ library(rvg)
 options(ggrepel.max.overlaps = Inf)
 
 #mylist is a list of plots
-save_quadmap_pptx_old <- function(mylist, target  ) {
+save_quadmap_pptx <- function(mylist, target  ) {
 
   #check if argumnet 1 is a list
   if (!(inherits(mylist, "list"))) {stop("You need a list of plots")}
@@ -71,7 +71,7 @@ save_CA_pptx <- function(x, target, folder = NULL, max.overlaps = 10, usetemplat
 
 
 #mylist is a list of plots
-save_quadmap_pptx <- function(mylist, target, folder = NULL) {
+save_quadmap_mypptx <- function(mylist, target, folder = NULL) {
 
   #check if argumnet 1 is a list
   if (!(inherits(mylist, "list"))) {stop("You need a list of plots")}
