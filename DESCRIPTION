@@ -1,6 +1,6 @@
 Package: HelpMe
 Title: The package Helps ME
-Version: 2.1.6
+Version: 3.0.0
 Authors@R: 
     c(person(given = "Sandrine", 
              family = "Lebon" ,
@@ -25,7 +25,8 @@ Imports:
     magrittr,
     rlang,
     stats,
-    utils
+    utils,
+    haven
 Depends: 
     R (>= 2.10)
 LazyData: true

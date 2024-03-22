@@ -12,7 +12,7 @@ file_csv <- system.file(package = "HelpMe", "extdata/dataquad.csv")
 #n+2 to 2n+1 impact
 #columns impact give name quadmap
 
-plots <- HelpMe::run_quadmap(file_csv, TBdetail = "T2B")
+plots <- HelpMe::run_quadmap(file_csv, TBdetail = "T2B",  max.overlaps = Inf)
 
 #visualisation
 plots
@@ -25,8 +25,8 @@ source(system.file(package = "HelpMe", "Rcode/helper_functions.R"))
 #helper functions not in package as depend of ooficer and rbg
 
 plots <- HelpMe::run_quadmap(file_csv, TBdetail = "T2B")
-print(custom_pptx(plots),"with_template_T2B.pptx")
+print(save_quadmap_mypptx(plots,"with_template_T2B.pptx"))
 
 plots <- HelpMe::run_quadmap(file_csv, TBdetail = "TB")
-print(custom_pptx(plots),"with_template_TB.pptx")
+print(save_quadmap_pptx(plots,"with_template_TB.pptx"))
 
