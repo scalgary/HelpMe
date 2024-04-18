@@ -62,7 +62,7 @@ result %>% pivot_wider(id_cols = c("Name","Label"), names_from= from, values_fro
 
 
 myplots <- run_quadmap("J:\\sas_ms\\22-071458-02\\H2\\AR1_2\\quadmap.csv",max.overlaps = Inf)
-save_quadmap_mypptx(myplots,file.path("C:\\Users\\Sandrine.Lebon01\\MAIN\\usatibn\\AR1_2","SATAUTO.pptx"))
+save_quadmap_mypptx(myplots,file.path("C:\\Users\\Sandrine.Lebon01\\MAIN\\usatibn\\AR1_2","test.pptx"))
 
 
 inputData <- read.csv(file = inputFile, encoding = "latin1") %>%
