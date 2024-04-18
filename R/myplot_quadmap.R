@@ -46,7 +46,8 @@ myplot_quadmap <- function(inputData, isHE = FALSE,
     ggplot2::geom_point(size = 2, color = "navy") +
     ggrepel::geom_text_repel(ggplot2::aes(label = inputData[, 1]),
                              size = 2.5, box.padding = ggplot2::unit(0.35, "lines"),force = force, max.overlaps = max.overlaps) +
-    ggplot2::theme(axis.title = ggplot2::element_text(size = 9),
+    ggplot2::theme(text = ggplot2::element_text(family="mono"),
+                   axis.title = ggplot2::element_text(size = 9),
                    axis.text.x = ggplot2::element_text(size = 7),
                    axis.text.y = ggplot2::element_text(size = 7))
 

@@ -62,4 +62,58 @@ result %>% pivot_wider(id_cols = c("Name","Label"), names_from= from, values_fro
 
 
 myplots <- run_quadmap("J:\\sas_ms\\22-071458-02\\H2\\AR1_2\\quadmap.csv",max.overlaps = Inf)
-save_quadmap_pptx(myplots,file.path("C:\\Users\\Sandrine.Lebon01\\MAIN\\usatibn\\AR1_2","SAT.pptx"))
+save_quadmap_mypptx(myplots,file.path("C:\\Users\\Sandrine.Lebon01\\MAIN\\usatibn\\AR1_2","SATAUTO.pptx"))
+
+
+inputData <- read.csv(file = inputFile, encoding = "latin1") %>%
+  select(Driver,TB0,Category)
+j<- 2
+nbbrand <- 1
+library(ggplot2)
+library(extrafont)
+loadfonts(device = "win")
+myplot <- ggplot(inputData, aes(x = inputData[, 2], y = inputData[, 3])) +
+  theme(text=element_text(family="mono")) +
+  geom_rect(
+    aes(xmin = mean(inputData[, 2]), xmax = Inf,
+        ymin = mean(inputData[, 3]), ymax = Inf),
+    fill = "mediumseagreen"
+  ) +
+  geom_rect(
+    aes(xmin = -Inf, xmax = mean(inputData[, j]),
+        ymin = mean(inputData[, j + nbbrand]), ymax = Inf),
+    fill = "lightgreen"
+  ) +
+  geom_rect(
+    aes(xmin = mean(inputData[, j]), xmax = Inf,
+        ymin = -Inf, ymax = mean(inputData[, j + nbbrand])),
+    fill = "sandybrown"
+  ) +
+  geom_rect(
+    aes(xmin = -Inf, xmax = mean(inputData[, j]),
+        ymin = -Inf, ymax = mean(inputData[, j + nbbrand])),
+    fill = "lightcoral"
+  ) +
+  geom_vline(
+    aes(xintercept = mean(inputData[, j])),
+    color = "grey50", alpha = 0.5
+  ) +
+  geom_hline(
+    aes(yintercept = mean(inputData[, j + nbbrand])),
+    color = "grey50", alpha = 0.5
+  ) +
+  geom_point(size = 2, color = "navy") +
+  geom_text_repel(aes(label = inputData[, 1]), size = 2.5, box.padding = unit(0.35, "lines"),force = 10
+  ) +
+  theme(axis.title = element_text(size = 9),
+        axis.text.x = element_text(size = 7),
+        axis.text.y = element_text(size = 7)) +
+  labs(x = "Attribute Performance", y = "Attribute Importance") +
+
+  scale_x_continuous(breaks = c(min(inputData[,j]),max(inputData[,j])),
+                     labels = function(a) sprintf("%.1f%%", round(a, digits = 2))) +
+  scale_y_continuous(breaks = c(min(inputData[,j + nbbrand]),max(inputData[,j + nbbrand])),
+                     labels = function(a) sprintf("%.2f", round(a, digits = 2)))
+
+
+myplot
