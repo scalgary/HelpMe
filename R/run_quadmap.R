@@ -22,6 +22,20 @@ run_quadmap <- function(file_csv, folder= NULL, isHE = FALSE, TBdetail = "T2B",
   return(plots)
 }
 
+#' Title
+#'
+#' @param file_csv
+#' @param folder
+#' @param isHE
+#' @param TBdetail
+#' @param masterbrand
+#' @param force
+#' @param max.overlaps
+#'
+#' @return
+#' @export
+#'
+#' @examples
 run_quadmap_BG <- function(file_csv, folder= NULL, isHE = FALSE, TBdetail = "T2B",
                         masterbrand = NULL, force = 10, max.overlaps = 10){
   df <- read.file(file_csv, folder)
