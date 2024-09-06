@@ -38,7 +38,7 @@ save_quadmap_pptx <- function(mylist, target  ) {
 
 
 
-save_CA_pptx <- function(x, target, folder = NULL, max.overlaps = 10, usetemplate = FALSE){
+save_CA_pptx <- function(x, target=NULL, folder = NULL, max.overlaps = Inf, usetemplate = FALSE){
   res.ca <- x
 
   if (!inherits(res.ca, "CA")) stop("non convenient data")
