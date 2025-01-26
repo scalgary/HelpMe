@@ -5,7 +5,7 @@ Authors@R:
     c(person(given = "Sandrine", 
              family = "Lebon" ,
              role = c("aut", "cre"),
-             email = "sandrine.lebon@ipsos.com"),
+             email = "slebon@icloud.com"),
               person(given = "Francois",
              family = "Husson",
              role = "aut")
@@ -15,8 +15,8 @@ License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.2.3
-URL: https://github.com/scalgary92/HelpMe
-BugReports: https://github.com/scalgary92/HelpMe/issues
+URL: https://github.com/scalgary/HelpMe
+BugReports: https://github.com/scalgary/HelpMe/issues
 Imports: 
     ggplot2,
     ggrepel,
