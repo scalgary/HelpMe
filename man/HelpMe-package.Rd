@@ -11,13 +11,13 @@ Several Helpful functions: Perceptual maps (without FactoMiner dependencies). Qu
 \seealso{
 Useful links:
 \itemize{
-  \item \url{https://github.com/scalgary92/HelpMe}
-  \item Report bugs at \url{https://github.com/scalgary92/HelpMe/issues}
+  \item \url{https://github.com/scalgary/HelpMe}
+  \item Report bugs at \url{https://github.com/scalgary/HelpMe/issues}
 }
 
 }
 \author{
-\strong{Maintainer}: Sandrine Lebon \email{sandrine.lebon@ipsos.com}
+\strong{Maintainer}: Sandrine Lebon \email{slebon@icloud.com}
 
 Authors:
 \itemize{
