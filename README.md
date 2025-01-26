@@ -12,7 +12,7 @@ You can install the development version of HelpMe from [GitHub](https://github.c
 
 ``` r
 # install.packages("devtools")
-devtools::install_github("scalgary92/HelpMe")
+devtools::install_github("scalgary9/HelpMe")
 ```
 
 ## Example
