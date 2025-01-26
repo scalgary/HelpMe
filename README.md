@@ -5,6 +5,10 @@
 <!-- badges: end -->
 
 The goal of HelpMe is to ...
+-- plot quadmaps
+-- plot perceptual maps (no dependency to the package factominer
+-- save the plots on pptx (depends of the officer package installation)
+
 
 ## Installation
 
@@ -12,7 +16,7 @@ You can install the development version of HelpMe from [GitHub](https://github.c
 
 ``` r
 # install.packages("devtools")
-devtools::install_github("scalgary9/HelpMe")
+devtools::install_github("scalgary/HelpMe")
 ```
 
 ## Example
